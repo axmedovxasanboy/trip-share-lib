@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'uz.tripshare'
-version = '1.1'
+version = '1.2'
 
 java {
     toolchain {
@@ -21,7 +21,7 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
             groupId 'uz.tripshare'
-            artifactId 'tripshare'
+            artifactId 'library'
 
             pom {
                 name = 'Bank System Core'
@@ -55,7 +55,6 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/axmedovxasanboy/trip-share-lib")
             credentials {
-                println(project.findProperty("gpr.token") ?: System.getenv("USERNAME"))
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
             }
