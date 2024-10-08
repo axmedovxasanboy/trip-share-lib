@@ -21,8 +21,9 @@ public class Trip extends BaseClass {
     private List<String> exclusions;
     private List<TripType> types;
     private TripStatus status;
+    private List<Integer> participants;
 
-    public Trip(String title, String description, LocalDate startDate, LocalDate endDate, Integer seats, String special, Integer ownerId, List<Destination> destinations, List<Stay> stays, List<String> inclusions, List<String> exclusions, List<TripType> types, TripStatus status) {
+    public Trip(String title, String description, LocalDate startDate, LocalDate endDate, Integer seats, String special, Integer ownerId, List<Destination> destinations, List<Stay> stays, List<String> inclusions, List<String> exclusions, List<TripType> types, TripStatus status, List<Integer> participants) {
         this.title = title;
         this.description = description;
         this.startDate = startDate;
@@ -36,6 +37,7 @@ public class Trip extends BaseClass {
         this.exclusions = exclusions;
         this.types = types;
         this.status = status;
+        this.participants = participants;
     }
 
     public Trip() {
@@ -143,5 +145,13 @@ public class Trip extends BaseClass {
 
     public void setStatus(TripStatus status) {
         this.status = status;
+    }
+
+    public List<Integer> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(List<Integer> participants) {
+        this.participants = participants;
     }
 }

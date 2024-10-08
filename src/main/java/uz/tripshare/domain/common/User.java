@@ -10,17 +10,17 @@ public class User extends BaseClass {
     private String email;
     private String phoneNumber;
     private String role;
-    private List<Trip> trips;
-    private Address address;
+    private List<Integer> trips;
+    private Integer addressId;
 
-    public User(String name, String username, String email, String phoneNumber, String role, List<Trip> trips, Address address) {
+    public User(String name, String username, String email, String phoneNumber, String role, List<Integer> trips, Integer addressId) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.role = role;
         this.trips = trips;
-        this.address = address;
+        this.addressId = addressId;
     }
 
     public User() {
@@ -66,19 +66,19 @@ public class User extends BaseClass {
         this.role = role;
     }
 
-    public List<Trip> getTrips() {
+    public List<Integer> getTrips() {
         return trips;
     }
 
-    public void setTrips(List<Trip> trips) {
+    public void setTrips(List<Integer> trips) {
         this.trips = trips;
     }
 
-    public Address getAddress() {
-        return address;
+    public Integer getAddress() {
+        return addressId;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddress(Integer addressId) {
+        this.addressId = addressId;
     }
 }
