@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'uz.tripshare'
-version = '1.2'
+version = '2.1'
 
 java {
     toolchain {
@@ -63,6 +63,8 @@ publishing {
 }
 
 dependencies {
+    implementation 'org.apache.kafka:kafka-clients:3.8.0'
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

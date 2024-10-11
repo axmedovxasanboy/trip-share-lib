@@ -1,6 +1,7 @@
 package uz.tripshare.domain.common;
 
 import uz.tripshare.domain.BaseClass;
+import uz.tripshare.domain.enumerators.UserRole;
 
 import java.util.List;
 
@@ -9,17 +10,19 @@ public class User extends BaseClass {
     private String username;
     private String email;
     private String phoneNumber;
-    private String role;
-    private List<Integer> trips;
+    private UserRole role;
+    private List<Integer> createdTrips;
+    private List<Integer> joinedTrips;
     private Integer addressId;
 
-    public User(String name, String username, String email, String phoneNumber, String role, List<Integer> trips, Integer addressId) {
+    public User(String name, String username, String email, String phoneNumber, UserRole role, List<Integer> createdTrips, List<Integer> joinedTrips, Integer addressId) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.role = role;
-        this.trips = trips;
+        this.createdTrips = createdTrips;
+        this.joinedTrips = joinedTrips;
         this.addressId = addressId;
     }
 
@@ -58,20 +61,28 @@ public class User extends BaseClass {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getRole() {
+    public UserRole getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(UserRole role) {
         this.role = role;
     }
 
-    public List<Integer> getTrips() {
-        return trips;
+    public List<Integer> getCreatedTrips() {
+        return createdTrips;
     }
 
-    public void setTrips(List<Integer> trips) {
-        this.trips = trips;
+    public void setCreatedTrips(List<Integer> createdTrips) {
+        this.createdTrips = createdTrips;
+    }
+
+    public List<Integer> getJoinedTrips() {
+        return joinedTrips;
+    }
+
+    public void setJoinedTrips(List<Integer> joinedTrips) {
+        this.joinedTrips = joinedTrips;
     }
 
     public Integer getAddress() {
